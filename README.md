@@ -57,6 +57,8 @@ https://extensions.gnome.org/extension/1160/dash-to-panel/
 
 ### todo
 - [ ] move from README.md todo to github issues
+- [ ] consider move to version controlled docker based tooling for cli tools (docker compose run or podamn compose run)
+- [ ] add podman and kubectl
 - [ ] add key directory/name to the apt install logic
 - [ ] add register latest release from exoscale cli tool logic [link](https://github.com/exoscale/cli/releases/)
 - [ ] switch branchprune script to binary install from external source
