@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# iterate on live desktop with git push and ansible-pull
+# dirty iterate on live desktop with git push and ansible-pull
 
 set -euxo pipefail
 
@@ -10,4 +10,4 @@ git add .
 git commit -m "iterate" --allow-empty
 git push
 
-ansible-pull -U https://github.com/datamate-rethink-it/linux-workstation -e "user=$USER" --clean --ask-become-pass
+ansible-pull -U https://github.com/anconrad/desktop-env/ -e "user=$USER" --clean --ask-become-pass

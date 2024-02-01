@@ -1,5 +1,5 @@
 ## linux-workstation
-Define a debian12 desktop enviroment without an artifact or provisioning-server via $ ansible-pull
+Definiton of a debian12 desktop enviroment without an artifact or provisioning-server via README.md and ansible-pull
 
 ### usage with debian 12 already running on the workstation
 `ansible-playbook local.yml --ask-become-pass -e "user=$USER"`
@@ -40,14 +40,14 @@ Login with <$user> / open a terminal
 3. change sources.list
 ```
 sudo apt-get install curl && \
-sudo curl https://raw.githubusercontent.com/datamate-rethink-it/linux-workstation/main/roles/linux-workstation/files/sources.list -o sources.list && \
+sudo curl https://raw.githubusercontent.com/anconrad/desktop-env/main/roles/linux-workstation/files/sources.list -o sources.list && \
 sudo chmod 644 sources.list && sudo chown root: sources.list && \
 sudo mv -f sources.list /etc/apt/sources.list
 ```
 4. run ansible-pull (BECOME Password = <$user> sudo Password)
 ```shellscript
 sudo apt-get -y install git ansible && \
-ansible-pull -U https://github.com/datamate-rethink-it/linux-workstation -e "user=$USER" --clean --ask-become-pass
+ansible-pull -U https://github.com/anconrad/desktop-env -e "user=$USER" --clean --ask-become-pass
 ```
 5. **reboot**
 
